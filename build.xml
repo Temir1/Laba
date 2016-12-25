@@ -1,0 +1,28 @@
+<project name="AntExampleSwing" default="new.jar">
+
+    <target name="clear">
+        <delete dir="build" />
+    </target>
+
+    <target name="compile" depends="clear" >
+        <mkdir dir="build/classes" />
+        <mkdir dir="build/bin" />
+
+        <javac destdir="build/classes">
+            <src path="src" />
+        </javac>
+
+    </target>
+    <target name="new.jar" depends="compile">
+
+        <jar destfile="build/bin/MyProgrammer.jar" >
+            <fileset dir="build/classes">
+                <include name="**/*.class"/>
+            </fileset>
+            <manifest>
+                <attribute name="swingnumber-class" value="swingnumber.HelloSwing" />
+            </manifest>
+        </jar>
+    </target>
+
+</project>

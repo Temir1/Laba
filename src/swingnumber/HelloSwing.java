@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-
 public class HelloSwing {
   /** main */
   public static void main(String []args) {
@@ -14,6 +13,7 @@ public class HelloSwing {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLocationRelativeTo(null);
     frame.setLayout(new BorderLayout());
+    frame.setResizable(false);
 
     JLabel label = new JLabel("Hello World");
     label.setForeground(Color.BLACK);
